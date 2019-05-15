@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Akronim');
+
+$mytype: 'Akronim', cursive;
+$brandcolor: #ff2994;
+
+body{
+    font-family: $mytype;
+}
+
+a,h2{
+    color:$brandcolor;
+}
+
+.post-list{
+    list-style: none;
+    a {
+        color:green;
+    }
+}
