@@ -2,3 +2,5 @@
 
 Ficheiros de trabalho para a aula de Jekyll.
 Baseado no tema [minima](https://github.com/jekyll/minima).
+
+escrever o que ele pediu, justificação das cenas

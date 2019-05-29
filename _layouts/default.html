@@ -1,20 +1,172 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="pt">
+{%- include head.html %}
+    
+<body>
+    {%- include header.html %} 
+     <main>
+        <nav id="primary">
+            <ol>
+                <li><a href="#worksnav">PROJETOS</a></li>
+                <li><a href="mailto:nicolehenriques@campus.ul.pt?subject=Hello!">SAY HELLO</a></li>
+            </ol>
+        </nav>
+        <div class="content">
+            <nav id="worksnav">
+                <ol>
+                    <li><a href="#editorial">EDITORIAL</a></li>
+                    <li><a href="#webdesign"> DESIGN DIGITAL</a></li>
+                    <li><a href="#identidadevisual">IDENTIDADE VISUAL</a></li>
+                </ol>
+            </nav>
+            <section id="editorial">         
+                <div>
+                    <article>
+                        <img src="assets/images/Love_me_cover.png" alt="Projeto Love Me" width="90%" height="auto" class="imagem">
+                        <h1>LOVE ME</h1> 
+                        <p> Publicação + Instalação <br>20cmx30cm </p>
+                        
+                        <div class="modal">
+                            <h2>article 1</h2>
+                            <div class="fechar"></div>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="assets/images/allcitiesarethesame_cover.png" alt="Publicação All cities are the same" width="100%" height="auto" class="imagem">
+                        <h1>ALL CITIES ARE THE SAME</h1>
+                        <p>Publicação <br>20cmx30cm</p>
+                        
+                        <div class="modal">
+                            <h2>article2</h2>
+                            <div class="fechar"></div>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article>
+                        <img src="assets/images/across_cover.png" alt="Publicação Across" width="90%" height="auto" class="imagem">
+                        <h1>ACROSS</h1><p>Publicação<br>20cmx30cm</p>
+                    </article>
+                    <article>
+                        <img src="assets/images/metamorphosis_cover.png" alt="Capa do Livro Metamorphosis" width="75%" height="auto" class="imagem">
+                        <h1>METAMORPHOSIS</h1><p>Livro<br>20cmx30cm</p>
+                    </article>
+                </div>
+             </section>
+             <section id="webdesign">
+                <div>
+                    <article class="excepto">
+                        <img src="assets/images/mint_cover.png" alt="Projeto Mint" width="90%" height="auto" class="imagem">
+                        <h1>mint</h1>
+                        <p>UI/UX — Interface da câmara digital + Mobile App + Web App</p>
+                    </article>
+                </div>
+                <div>
+                    <article>
+                        <img src="assets/images/thejourney_cover.gif" alt="Ebook The journey" width="80%" height="auto" class="imagem">
+                        <h1>THE JOURNEY</h1><p>Ebook</p>
+                    </article>
+                    <article>
+                        <img src="assets/images/binary_relationships_cover.gif" alt="Ebook binary relationships" width="81%" height="auto" class="imagem">
+                        <h1>BINARY RELATIONSHIPS</h1><p>Ebook</p>
+                    </article>
+                </div>
+                <div>
+                    <article class="excepto">
+                        <img src="assets/images/here_and_there_HOME.jpg" alt="Site Here and There" width="90%" height="auto" class="imagem">
+                        <h1>Here and There</h1><p>UI/UX — Web App</p>
+                    </article>
+                </div>
+            </section>
+            <section id="identidadevisual">
+                <div>
+                    <article>
+                        <img src="assets/images/logo_FINAL_branco-02.png" alt="Ae Fbaul" width="100%" height="auto" class="imagem">
+                        <h1>AEFBAUL</h1> 
+                        <p>Identidade Visual</p>
+                   </article>
+                </div>
+            </section>
+            <section id="about">
+                <h1 class="titulo">OI, HELLO, SALUT</h1>
+                <p class="about">
+                    Comecei nos desenhos com canela no arroz doce e fui até ao Design de Comunicação. 
+                    <br>
+                    <br>
+                    Desde que me lembro gosto de fazer várias coisas e isso fez-me escolher o Design de Comunicação. As possibilidades de projetos com os mais variados temas é uma das características principais pelas quais adoro aquilo que faço. Gosto de ter de pensar sobre coisas diferentes e de as conhecer, de ouvir as experiências que outros já viveram e conhecer as transformações. Gosto de aprender com os outros.
+                    <br>
+                    <br>            
+                    A Faculdade de Belas-Artes em Lisboa foi a minha casa durante a licenciatura, mudei-me do campo para a cidade e agora vivo no limbo entre os dois ambientes (nem são assim muito diferentes, há baratas nos dois lados). Durante a licenciatura os meus projetos incidiram mais na área do editorial e da instalação mas rapidamente me apercebi da paixão pela web e pelas possibilidade de interação.
 
-  {%- include head.html -%}
-
-  <body>
-
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+                    <br><br>Hoje em dia estou a fazer uma Pós-Graduação em Digital Experience Design na Faculdade de Belas-Artes de Lisboa.
+                    <br> 
+                </p>
+                <article class="sem_padding">
+                    <h1 class="titulo"> EDUCAÇÃO</h1> 
+                    <p class="topicos">(2018 — presente) <br> Pós Graduação <br> Digital Experience Design na <a href="http://www.belasartes.ulisboa.pt/">Faculdade de Belas-Artes da Universidade de Lisboa.</a>
+                    <br><br> (2015 — 2018) <br> Licenciatura <br>
+                    Design de Comunicação na <a href="http://www.belasartes.ulisboa.pt/">Faculdade de Belas-Artes da Universidade de Lisboa.</a><br><br>
+                    (2012 — 2015)<br>
+                    Ensino Secundário <br>
+                    Curso científico-humanístico de Artes Visuais na Escola Secundária Henriques Nogueira.
+                    </p>
+                </article>
+                <article class="sem_padding">
+                    <h1 class="titulo"> FERRAMENTAS</h1>
+                    <p class="bold" class="topicos">PROGRAMAS</p>
+                    <p class="topicos">
+                    Indesign<br>
+                    Photoshop<br>
+                    Illustrator<br>
+                    Sketch<br>
+                    FIGMA<br>
+                    XD<br>
+                    After Effects<br>
+                    Premiere<br>
+                    Brackets<br>
+                    Principle<br>
+                    Invision<br>
+                    </p>
+                    <p class="bold" class="margin_zero" >ONLINE</p>
+                    <p class="topicos">
+                    Trello<br>
+                    Slack<br>
+                    Google Drive<br>
+                    Dropbox<br>
+                    </p>
+                </article>
+            </section>
+            <section id="contacts">
+                <h1 class="titulo">PARA FALAREM COMIGO</h1>
+                <p class="topicos"> E-MAIL <br> <a href="mailto:nicolehenriques@campus.ul.pt?subject=hello!">nicolehenriques@campus.ul.pt</a><br>
+                <br>TELEFONE<br>
+                +351 910 148 651 <br><br>
+                INSTAGRAM<br>
+                <a href="https://www.instagram.com/nicolehenriqs/">nicolehenriqs <br></a>
+                </p>
+            </section>
+        </div>
+        <nav id="secondary">
+            <ol>
+                <li><a href="#about">SOBRE MIM</a></li><li><a href="#contacts">CONTACTOS</a></li>
+            </ol>
+        </nav>
+        
     </main>
-
-    {%- include footer.html -%}
-
-  </body>
-
+    
+    <script>
+        
+        $("article").click(function() {
+            var isto = $(this).find(".modal");
+            $(".modal").not(isto).hide();
+            isto.show();
+        })
+        
+        $(".fechar").click(function (e) {
+            e.stopPropagation();
+            $(".modal").hide();
+        })
+        
+    </script>
+</body>
 </html>
