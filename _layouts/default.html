@@ -4,25 +4,15 @@
     
 <body>
     {%- include header.html %} 
-     <main>
-        <nav id="primary">
-            <ol>
-                <li><a href="#worksnav">PROJETOS</a></li>
-                <li><a href="mailto:nicolehenriques@campus.ul.pt?subject=Hello!">SAY HELLO</a></li>
-            </ol>
-        </nav>
+     
+<main>
+        
         <div class="content">
-            <nav id="worksnav">
-                <ol>
-                    <li><a href="#editorial">EDITORIAL</a></li>
-                    <li><a href="#webdesign"> DESIGN DIGITAL</a></li>
-                    <li><a href="#identidadevisual">IDENTIDADE VISUAL</a></li>
-                </ol>
-            </nav>
+            {%- include menu.html %}
             <section id="editorial">         
-                <div>
-                    <article>
-                        <img src="assets/images/Love_me_cover.png" alt="Projeto Love Me" width="90%" height="auto" class="imagem">
+                <ol>
+                    <li>
+                        <img src="assets/images/Love_me_cover.png" alt="Projeto Love Me" width="90%"  class="imagem">
                         <h1>LOVE ME</h1> 
                         <p> Publicação + Instalação <br>20cmx30cm </p>
                         
@@ -30,9 +20,10 @@
                             <h2>article 1</h2>
                             <div class="fechar"></div>
                         </div>
-                    </article>
-                    <article>
-                        <img src="assets/images/allcitiesarethesame_cover.png" alt="Publicação All cities are the same" width="100%" height="auto" class="imagem">
+                    </li>
+                 
+                    <li>
+                        <img src="assets/images/allcitiesarethesame_cover.png" alt="Publicação All cities are the same" width="100%"  class="imagem">
                         <h1>ALL CITIES ARE THE SAME</h1>
                         <p>Publicação <br>20cmx30cm</p>
                         
@@ -40,52 +31,46 @@
                             <h2>article2</h2>
                             <div class="fechar"></div>
                         </div>
-                    </article>
-                </div>
-                <div>
-                    <article>
-                        <img src="assets/images/across_cover.png" alt="Publicação Across" width="90%" height="auto" class="imagem">
+                    </li>
+                    <li>
+                        <img src="assets/images/across_cover.png" alt="Publicação Across" width="90%"  class="imagem">
                         <h1>ACROSS</h1><p>Publicação<br>20cmx30cm</p>
-                    </article>
-                    <article>
-                        <img src="assets/images/metamorphosis_cover.png" alt="Capa do Livro Metamorphosis" width="75%" height="auto" class="imagem">
+                    </li>
+                    <li>
+                        <img src="assets/images/metamorphosis_cover.png" alt="Capa do Livro Metamorphosis" width="75%" class="imagem">
                         <h1>METAMORPHOSIS</h1><p>Livro<br>20cmx30cm</p>
-                    </article>
-                </div>
+                    </li>
+               </ol>
              </section>
              <section id="webdesign">
-                <div>
-                    <article class="excepto">
-                        <img src="assets/images/mint_cover.png" alt="Projeto Mint" width="90%" height="auto" class="imagem">
+                <ol>
+                    <li class="excepto">
+                        <img src="assets/images/mint_cover.png" alt="Projeto Mint" width="90%" class="imagem">
                         <h1>mint</h1>
                         <p>UI/UX — Interface da câmara digital + Mobile App + Web App</p>
-                    </article>
-                </div>
-                <div>
-                    <article>
-                        <img src="assets/images/thejourney_cover.gif" alt="Ebook The journey" width="80%" height="auto" class="imagem">
+                    </li>
+                    <li>
+                        <img src="assets/images/thejourney_cover.gif" alt="Ebook The journey" width="80%"  class="imagem">
                         <h1>THE JOURNEY</h1><p>Ebook</p>
-                    </article>
-                    <article>
-                        <img src="assets/images/binary_relationships_cover.gif" alt="Ebook binary relationships" width="81%" height="auto" class="imagem">
+                    </li>
+                    <li>
+                        <img src="assets/images/binary_relationships_cover.gif" alt="Ebook binary relationships" width="81%" class="imagem">
                         <h1>BINARY RELATIONSHIPS</h1><p>Ebook</p>
-                    </article>
-                </div>
-                <div>
-                    <article class="excepto">
+                    </li>
+                    <li class="excepto">
                         <img src="assets/images/here_and_there_HOME.jpg" alt="Site Here and There" width="90%" height="auto" class="imagem">
                         <h1>Here and There</h1><p>UI/UX — Web App</p>
-                    </article>
-                </div>
+                    </li>
+                 </ol>
             </section>
             <section id="identidadevisual">
-                <div>
-                    <article>
+                <ol>
+                    <li>
                         <img src="assets/images/logo_FINAL_branco-02.png" alt="Ae Fbaul" width="100%" height="auto" class="imagem">
                         <h1>AEFBAUL</h1> 
                         <p>Identidade Visual</p>
-                   </article>
-                </div>
+                   </li>
+                </ol>
             </section>
             <section id="about">
                 <h1 class="titulo">OI, HELLO, SALUT</h1>
@@ -146,27 +131,8 @@
                 </p>
             </section>
         </div>
-        <nav id="secondary">
-            <ol>
-                <li><a href="#about">SOBRE MIM</a></li><li><a href="#contacts">CONTACTOS</a></li>
-            </ol>
-        </nav>
-        
+    
     </main>
     
-    <script>
-        
-        $("article").click(function() {
-            var isto = $(this).find(".modal");
-            $(".modal").not(isto).hide();
-            isto.show();
-        })
-        
-        $(".fechar").click(function (e) {
-            e.stopPropagation();
-            $(".modal").hide();
-        })
-        
-    </script>
 </body>
 </html>

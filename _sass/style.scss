@@ -16,10 +16,11 @@ height: 100px;
 z-index: 1;
 position: fixed;
 padding-top: 20px;
+top:0;
 }
 
 #logo {
-height: 100px;
+height: 50px;
 display: block;
 text-align: center;
 color: cornflowerblue;
@@ -28,39 +29,63 @@ font-family: 'Archivo';
 font-weight: 400;
 margin-left: auto;
 margin-right: auto;
-}
-
-#primary , 
-#secondary {
-width: auto;
-height: 20%;
-float:left;
-list-style: none;
-color: white;
-margin-top: 170px;
+margin-top: 20px;
 }
 
 #primary {
-position: fixed;
-left: 0px;
-transform: rotate(-90deg);    
+width: 100vw;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-content: center;
+list-style: none;
+color: white;
+position: absolute;
+top:0;
+z-index: -1;
 }
 
-#secondary {
-position: fixed;
-right:0px;
-transform: rotate(90deg);
+#primary ol:first-child {
+transform: rotate(-90deg) translateY(-150px);
+transform-origin: right center;
+margin-top: 80px;
 }
 
-#primary ol li, #secondary ol li {
-text-align: center;
+#primary ol:last-child {
+transform: rotate(90deg) translateY(-150px);
+transform-origin: left center;
+margin-top: 80px;
+}
+
+
+#primary ol li {
 font-weight: 600;
 font-size: 14px;
 display: block;
 float: left;
-margin-top: auto;
-margin-bottom: auto;
 margin-right: 50px;
+}
+
+#editorial ol{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:50%;
+}
+
+#editorial li {
+     display: inline-block;
+}
+
+#webdesign ol{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:50%;
+}
+
+#identidadevisual ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:50%;
 }
 
 a {
@@ -75,7 +100,6 @@ text-decoration: underline;
 .content {
 width: 60%;
 height: 100vh;
-float: left;
 margin-top: 100px;
 margin-left: 20%;
 }
@@ -111,19 +135,10 @@ height: 100%;
 float: left;
 }
 
-article {
-width: 50%;
-height: auto;
-padding:10px;
-float: left;
-margin-top: 10px;
-margin-left: auto;
-margin-right: auto;
-display: block;
-}
-
 .excepto {
-width: 100%;
+grid-column-start:1;
+grid-column-end:3;
+    
 }
 
 .sem_padding {
@@ -136,12 +151,17 @@ margin-right: auto;
 margin-left: auto;
 }
 
-h1 {
+li h1 {
+margin-top: 20px;
 color: white;
+}
+
+h1 {
+color: cornflowerblue;
 font-weight: 400;
 font-size: 12px;
 text-align: center;
-margin-top: 5px;
+margin-top: 50px;
 margin-bottom: 0px;
 }
 
@@ -153,7 +173,6 @@ margin-top: 2px;
 }
 
 #about {
-margin-top: 50px;
 margin-bottom: 50px;
 color: white;
 float: left;
