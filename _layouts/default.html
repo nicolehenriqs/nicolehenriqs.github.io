@@ -9,7 +9,14 @@
         
         <div class="content">
             {%- include menu.html %}
-            <section id="editorial">         
+            <section id="editorial">  
+                <ul>
+                {% for post in site.posts %}
+                    <li>
+                        <a href="{{ post.url }}">{{ post.title }} {{ post.content }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
                 <ol>
                     <li>
                         <img src="assets/images/Love_me_cover.png" alt="Projeto Love Me" width="90%"; class="imagem">
