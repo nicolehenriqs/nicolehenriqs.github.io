@@ -1,72 +1,27 @@
 ---
 layout: default
 ---
-
- <main>
-        
-          {%- include menu.html %}
-            <section id="editorial">         
-                <ol>
-                    <li>
-                        <img src="imagens/Love_me_cover.png" alt="Projeto Love Me" width="90%"  class="imagem">
-                        <h1>LOVE ME</h1> 
-                        <p> Publicação + Instalação <br>20cmx30cm </p>
-                        
-                        <div class="modal">
-                            <h2>article 1</h2>
-                            <div class="fechar"></div>
-                        </div>
-                    </li>
-                 
-                    <li>
-                        <img src="imagens/allcitiesarethesame_cover.png" alt="Publicação All cities are the same" width="100%"  class="imagem">
-                        <h1>ALL CITIES ARE THE SAME</h1>
-                        <p>Publicação <br>20cmx30cm</p>
-                        
-                        <div class="modal">
-                            <h2>article2</h2>
-                            <div class="fechar"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="imagens/across_cover.png" alt="Publicação Across" width="90%"  class="imagem">
-                        <h1>ACROSS</h1><p>Publicação<br>20cmx30cm</p>
-                    </li>
-                    <li>
-                        <img src="imagens/metamorphosis_cover.png" alt="Capa do Livro Metamorphosis" width="75%" class="imagem">
-                        <h1>METAMORPHOSIS</h1><p>Livro<br>20cmx30cm</p>
-                    </li>
-               </ol>
-             </section>
-             <section id="webdesign">
-                <ol>
-                    <li class="excepto">
-                        <img src="imagens/mint_cover.png" alt="Projeto Mint" width="90%" class="imagem">
-                        <h1>mint</h1>
-                        <p>UI/UX — Interface da câmara digital + Mobile App + Web App</p>
-                    </li>
-                    <li>
-                        <img src="imagens/thejourney_cover.gif" alt="Ebook The journey" width="80%"  class="imagem">
-                        <h1>THE JOURNEY</h1><p>Ebook</p>
-                    </li>
-                    <li>
-                        <img src="imagens/binary_relationships_cover.gif" alt="Ebook binary relationships" width="81%" class="imagem">
-                        <h1>BINARY RELATIONSHIPS</h1><p>Ebook</p>
-                    </li>
-                    <li class="excepto">
-                        <img src="imagens/here_and_there_HOME.jpg" alt="Site Here and There" width="90%" height="auto" class="imagem">
-                        <h1>Here and There</h1><p>UI/UX — Web App</p>
-                    </li>
-                 </ol>
+<section id="editorial">  
+            <ul>
+                {% for post in site.posts %}
+                    {% if post.editorial %} 
+                        <li>
+                     {{ post.content }}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
             </section>
-            <section id="identidadevisual">
-                <ol>
-                    <li>
-                        <img src="imagens/logo_FINAL_branco-02.png" alt="Ae Fbaul" width="100%" height="auto" class="imagem">
-                        <h1>AEFBAUL</h1> 
-                        <p>Identidade Visual</p>
-                   </li>
-                </ol>
+             <section id="webdesign">
+               <ul>
+                {% for post in site.posts %}
+                    {% if post.digital %} 
+                        <li>
+                        {{ post.content }}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
             </section>
             <section id="about">
                 <h1 class="titulo">OI, HELLO, SALUT</h1>
@@ -118,15 +73,11 @@ layout: default
                 </article>
             </section>
             <section id="contacts">
-                <h1 class="titulo">PARA FALAREM COMIGO</h1>
-                <p class="topicos"> E-MAIL <br> <a href="mailto:nicolehenriques@campus.ul.pt?subject=hello!">nicolehenriques@campus.ul.pt</a><br>
+                <h1 class="titulo">LET'S TALK</h1>
+                <p class="topicos"> E-MAIL <br> <a href="mailto:nicolepaulohenriques@gmail.com?subject=hello!">nicolehenriques@campus.ul.pt</a><br>
                 <br>TELEFONE<br>
                 +351 910 148 651 <br><br>
-                INSTAGRAM<br>
-                <a href="https://www.instagram.com/nicolehenriqs/">nicolehenriqs <br></a>
+                BEHANCE<br>
+                <a href="https://www.behance.net/nicolehenriques">nicolehenriqs <br></a>
                 </p>
             </section>
-        </div>
-    
-    </main>
-
