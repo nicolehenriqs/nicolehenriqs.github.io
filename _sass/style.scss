@@ -6,8 +6,15 @@ $font-destaques: 'Archivo';
 
 @mixin grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:500px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:auto;
+    padding: 0px;
+}
+
+@mixin small-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:auto;
     padding: 0px;
 }
 
@@ -57,34 +64,30 @@ position: absolute;
 top:0;
 z-index: -1;
 
+    ol{
+        &:first-child {
+            transform: rotate(-90deg) translateY(-150px);
+            transform-origin: right center;
+            margin-top: 80px;
+        }
 
-    ol:first-child {
-        transform: rotate(-90deg) translateY(-150px);
-        transform-origin: right center;
-        margin-top: 80px;
-    }
+        &:last-child {
+            transform: rotate(90deg) translateY(-150px);
+            transform-origin: left center;
+            margin-top: 80px;
+        }
 
-    ol:last-child {
-        transform: rotate(90deg) translateY(-150px);
-        transform-origin: left center;
-        margin-top: 80px;
-    }
-
-
-    ol li {
-        font-weight: 600;
-        font-size: 14px;
-        display: inline-block;
-        margin-right: 50px;
+        li {
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+            margin-right: 50px;
+        }
     }
 }
 
-#editorial ul{
+#editorial ul, #webdesign ul {
    @include grid;
-}
-
-#webdesign ul{
-    @include grid;
 }
 
 a {
@@ -105,19 +108,19 @@ margin-right: auto;
 }
 
 #worksnav {
-text-align: center;
-list-style: none;
-display: flex;
-justify-content: center;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 
     ol {
         padding-inline-start: 0px;
-    }
-
-    ol li {
-        display: inline-block;
-        text-align: center;
-        margin-right: 20px;
+   
+        li {
+            display: inline-block;
+            text-align: center;
+            margin-right: 20px;
+        }
     }
 }
 
@@ -132,7 +135,7 @@ text-align: center;
 
 .excepto {
 grid-column-start:1;
-grid-column-end:2;
+grid-column-end:3;
     
 }
 
@@ -143,8 +146,7 @@ padding: 0px;
 .imagem {
 margin-right: 5px;
 margin-left: 5px;
-max-width: 300px;
-min-width: 100px;
+width: 90%;
 }
 
 li h1 {
@@ -169,7 +171,7 @@ margin-top: 2px;
 }
 
 #about {
-margin-bottom: 50px;
+margin-bottom:0px;
 color: white;
 float: left;
 }
@@ -214,7 +216,7 @@ margin: 0;
 
 @media only screen and ( max-width: 480px ) {
 
-body {
+body, .bold .topicos .about{
 font-size: 14px;
 }
 
@@ -235,23 +237,25 @@ display: flex;
 flex: column;
 justify-content: space-between;
 
-    ol:first-child {
-        transform: rotate(0deg) translateY(0px);
-        margin-bottom: 50px;
-        margin-top: 40px;
-    }
+    ol {
+        &:first-child {
+            transform: rotate(0deg) translateY(0px);
+            margin-bottom: 50px;
+            margin-top: 40px;
+        }
     
-    ol:last-child {
-        transform: rotate(0deg) translateY(0px);
-        margin-bottom: 50px;
-        margin-top: 40px;
-        padding-bottom: 20px;
-        text-align: left;
-    }
+        &:last-child {
+            transform: rotate(0deg) translateY(0px);
+            margin-bottom: 50px;
+            margin-top: 40px;
+            padding-bottom: 20px;
+            text-align: left;
+        }
 
-    ol li {
-        margin-right: 0px;
-        font-size: 18px;
+        li {
+            margin-right: 0px;
+            font-size: 18px;
+        }
     }
 }
 
@@ -261,19 +265,19 @@ margin-top: 0px;
     
     ol {  
         padding-left: 0px;
-    }
-    ol li {
-        display: block;
-        margin-right: 0px;
-        font-size: 18px;
-        padding-bottom: 10px;
+        
+        li {
+            display: block;
+            margin-right: 0px;
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
     }
 }
 
 .content {
-width:100%;
-margin-left: 0%;
-margin-top: 140px;
+width: 80%;
+margin-top: 160px;
 }
 
 article {
@@ -285,29 +289,10 @@ font-size: 18px;
 text-align: left;
 }
 
-.about {
-font-size: 14px;
+
+#editorial ul, #webdesign ul{
+@include small-grid
 }
 
-.bold {
-font-size: 14px;   
-}
-    
-.topicos {
-font-size: 14px;
-}
 
-#webdesign ul{
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows:auto;
-padding: 0;
-}
-    
-#editorial ul{
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows:auto;
-padding: 0;
-}
 }
