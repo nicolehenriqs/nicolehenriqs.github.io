@@ -8,7 +8,10 @@ $font-destaques: 'Archivo';
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows:auto;
+    grid-gap: 20px;
     padding: 0px;
+    margin: 0px;
+    
 }
 
 @mixin small-grid {
@@ -90,6 +93,15 @@ z-index: -1;
    @include grid;
 }
 
+#webdesign ul li{
+
+    &:first-child {
+    grid-column: 1/3;
+    }
+    &:last-child {
+         grid-column: 1/3;
+    }
+}
 a {
     text-decoration: none;
     color: $branco;
@@ -134,13 +146,8 @@ text-align: center;
 }
 
 .excepto {
-grid-column-start:1;
-grid-column-end:3;
+grid-column: 1/3;
     
-}
-
-.sem_padding {
-padding: 0px;
 }
 
 .imagem {
@@ -203,10 +210,8 @@ text-align: left;
 margin-bottom: 10px;
 }
 
-.bold {
-font-size: 16px;
-font-weight: 600;
-text-align: left;
+b {
+    font-weight: 600;
 }
 
 .margin_zero{
@@ -220,6 +225,9 @@ body, .bold .topicos .about{
 font-size: 14px;
 }
 
+.topicos {
+        margin-bottom: 0px;
+    }
 header {
 height: 100px;
 }
@@ -231,7 +239,7 @@ height: 50px;
 
 #primary {
 width: 100%;
-height: auto;
+height: 100px;
 margin-top: 50px;
 display: flex;
 flex: column;
@@ -240,16 +248,13 @@ justify-content: space-between;
     ol {
         &:first-child {
             transform: rotate(0deg) translateY(0px);
-            margin-bottom: 50px;
             margin-top: 40px;
         }
     
         &:last-child {
             transform: rotate(0deg) translateY(0px);
-            margin-bottom: 50px;
             margin-top: 40px;
-            padding-bottom: 20px;
-            text-align: left;
+            
         }
 
         li {
@@ -292,6 +297,16 @@ text-align: left;
 
 #editorial ul, #webdesign ul{
 @include small-grid
+}
+    
+#webdesign ul li{
+
+    &:first-child {
+    grid-column: 1;
+    }
+    &:last-child {
+         grid-column: 1;
+    }
 }
 
 
