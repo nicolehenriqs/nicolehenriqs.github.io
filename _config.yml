@@ -1,9 +1,8 @@
 title: My Jekyll DXD Blog
 author: Nicole Henriques
-email: nicolehenriques@campul.ul.pt
+email: nicolepaulohenriques@gmail.com
 description: > # this means to ignore newlines until "exclude"
-  Write an awesome description for your new site here. This could
-  for example be used for SEO purposes.
+ Comecei nos desenhos com canela no arroz doce e fui até ao Design de Comunicação. Desde que me lembro gosto de fazer várias coisas e isso fez-me escolher o Design de Comunicação. As possibilidades de projetos com os mais variados temas é uma das características principais pelas quais adoro aquilo que faço. Gosto de ter de pensar sobre coisas diferentes e de as conhecer, de ouvir as experiências que outros já viveram e conhecer as transformações. Gosto de aprender com os outros. 
 
 exclude:
   - Gemfile
@@ -15,8 +14,3 @@ exclude:
 # refer to http://shopify.github.io/liquid/filters/date/ if you
 # want to customize this
 date_format: "%b %-d, %Y"
-
-# generate social links in footer
-social_links:
-twitter: nicolehenriqs
-# facebook:
